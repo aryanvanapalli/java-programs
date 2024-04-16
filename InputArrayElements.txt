@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class InputArrayElements {
+    public static void main(String[] args) {
+        // Create a Scanner object for user input
+        Scanner scanner = new Scanner(System.in);
+        
+        // Define the array to hold 8 elements
+        int[] arr1 = new int[8];
+        
+        // Prompt the user to enter the elements
+        System.out.println("Enter 8 elements:");
+
+        // Input each element into the array
+        for (int i = 0; i < 8; i++) {
+            System.out.print("Element " + (i + 1) + ": ");
+            arr1[i] = scanner.nextInt();
+        }
+        
+        // Close the scanner to prevent resource leak
+        scanner.close();
+        
+        // Display the elements entered by the user
+        System.out.println("\nElements entered by the user:");
+        for (int i = 0; i < 8; i++) {
+            System.out.print(arr1[i] + " ");
+        }
+	int[] arr2 = new int[8];
+	 arr2= arr1;
+	System.out.println("\ncopied elements:");
+        for (int i = 0; i < 8; i++) {
+            System.out.print(arr2[i] + " ");
+        }
+    }
+}
